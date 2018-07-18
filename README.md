@@ -2,7 +2,9 @@
 
 Notes for [https://molily.de/robust-javascript](https://molily.de/robust-javascript).
 
-## Characteristics of JS
+## Introduction
+
+### Characteristics of JS
 
 HMTL and CSS are declarative and obey the [law of least power](https://www.w3.org/2001/tag/doc/leastPower.html).
 
@@ -12,7 +14,7 @@ When HTML and CSS fails the impact is usually limited. They are designed to be p
 
 A single JS error can be catastrophic and make the whole page unusable.
 
-## The browser as runtime
+### The browser as runtime
 
 The web is an open, vendor-independent, heterogenous publishing platform.
 
@@ -24,7 +26,7 @@ Different browsers (and versions) on different devices and OS with different net
 
 > Do not take anything for granted. Do not count on anything. Question your beliefs.
 
-## JS standards
+### JS standards
 
 Not a single spec but a bunch of them:
 
@@ -41,3 +43,67 @@ Not a single spec but a bunch of them:
 * The HTML and DOM specs define the main objects that client-side JavaScript is dealing with: nodes, elements and events. Fundamental objects include `window` and `document`.
 
 * There are a lot of other specifications that add more APIs to the browser’s JS environment. These are usually just called Web APIs.
+
+## Achieving Robustness
+
+> Performs well not only under ordinary conditions but also under unusual conditions that stress its designers’ assumptions.
+
+making informed assumptions
+
+### Graceful degradation
+
+Building a full-featured website and adding fallbacks for clients that lack certain capabilities.
+
+i.e. don't fail when a requirement is not met but fall back to a simpler version.
+
+### Progressive enhancement
+
+Start with a minimal feature set that has low barrier of entry (e.g. built only on well established browser features).
+
+Enhance the inital version if more features can be made available (usually based on feature/version checks).
+
+i.e. enhancing but only if we can, staying robust and accessible to browsers/devices with restricted capabilities.
+
+### Graceful degradation vs progressive enhancement
+
+Both has pros and cons in different contexts and can be used together.
+
+Progressive enhancement is usually considered offering more benefits.
+
+Both rely on checking client capabilities with feature detection.
+
+### Fault tolerance
+
+The whole system continues to operate even if sub-systems fail.
+
+Differentiate critical and non-critical sub-systems.
+
+Fault tolerance in JS: dividing the code into independent, sandboxed sub-systems. Only few of them should be critical.
+
+No definition of native sandboxes in JS (yet).
+
+We can employ existing techniques like try..catch and Promises to achieve the desired effect.
+
+## Postel's law
+
+From [RFC 790](https://tools.ietf.org/html/rfc760) (IP):
+
+> In general, an implementation should be conservative in its sending behavior, and liberal in its receiving behavior.
+
+and from [RFC 761](https://tools.ietf.org/html/rfc761) (TCP):
+
+> TCP implementations should follow a general principle of robustness: be conservative in what you do, be liberal in what you accept from others.
+
+The original idea is specific to TCP/IP but can be generalized to all programs that read, parse and process user input, file formats or other structured data.
+
+Actually maybe instead of accepting anything a program can interpret how about a program:
+
+* be explicit about what it accepts
+* is outspoken about technical errors
+* has a well-defined error handling
+
+## How JS might fail
+
+TODO
+
+## How to prevent failure
