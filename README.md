@@ -32,9 +32,9 @@ Not a single spec but a bunch of them:
 
 The [ECMAScript spec](https://www.ecma-international.org/publications/standards/Ecma-262.htm) defines the core of the language: language features, syntax, execution and the standard library.
 
-ECMAScript does not define a host environment in which a program is executed, it allows for several
+ECMAScript does not define a host environment in which a program is executed, it allows for several.
 
-An HTML document in the browser is one possible host environment. Node.js is another popular one.
+An HTML document in the browser is one host environment (and Node.js is another one).
 
 The [HTML spec](https://www.w3.org/TR/html5/) defines HTML as a markup language and also defines how JS is executed in the context of an HTML document.
 
@@ -42,7 +42,7 @@ The [DOM spec](https://dom.spec.whatwg.org/) (and HTML spec) define how JS can a
 
 The HTML and DOM specs define the main objects that client-side JavaScript is dealing with: nodes, elements and events. Fundamental objects include `window` and `document`.
 
-There are a lot of other specifications that add more APIs to the browser’s JS environment. These are usually just called Web APIs.
+There are a lot of other specifications that add more APIs to the browser’s JS environment. These are collectively called [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API).
 
 ## Achieving Robustness
 
@@ -104,7 +104,7 @@ Actually maybe instead of accepting anything a program can interpret how about a
 
 ## How JS might fail
 
-TODO
+### Web crawlers without JS support
 
 ## How to prevent failure
 
