@@ -96,7 +96,7 @@ and in [RFC 761](https://tools.ietf.org/html/rfc761) (TCP):
 
 The original idea is specific to TCP/IP but can be generalized to all programs that read, parse and process user input, file formats or other structured data.
 
-Actually maybe instead of accepting anything a program can interpret how about a program:
+Actually maybe instead of accepting anything (that a program can interpret) how about a program:
 
 * be explicit about what it accepts
 * is outspoken about technical errors
