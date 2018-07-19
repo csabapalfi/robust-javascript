@@ -86,11 +86,11 @@ We can employ existing techniques like try..catch and Promises to achieve the de
 
 ### Postel's law
 
-From [RFC 790](https://tools.ietf.org/html/rfc760) (IP):
+Jon Postel in [RFC 790](https://tools.ietf.org/html/rfc760) (IP):
 
 > In general, an implementation should be conservative in its sending behavior, and liberal in its receiving behavior.
 
-and from [RFC 761](https://tools.ietf.org/html/rfc761) (TCP):
+and in [RFC 761](https://tools.ietf.org/html/rfc761) (TCP):
 
 > TCP implementations should follow a general principle of robustness: be conservative in what you do, be liberal in what you accept from others.
 
