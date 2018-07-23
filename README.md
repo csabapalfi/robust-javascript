@@ -104,13 +104,17 @@ Actually maybe instead of accepting anything (that a program can interpret) how 
 
 ## How JS might fail
 
-### Bots without JS support
+### Bots without or limited JS support
 
 Most bots ignore JS or don't execute it as normal browsers.
 
 e.g. Google bots execute JS with a timeout.
 
 Most page content ideally should still be available without JS.
+
+Also bots might be based on different/old browser versions.
+
+e.g. GoogleBot based on Chrome 41 or bots based on PhantomJS that uses an old version of WebKit.
 
 ### Users with JS disabled or blocked
 
