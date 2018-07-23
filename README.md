@@ -104,7 +104,17 @@ Actually maybe instead of accepting anything (that a program can interpret) how 
 
 ## How JS might fail
 
-### Web crawlers without JS support
+### Bots without JS support
+
+Most bots ignore JS or don't execute it as normal browsers.
+
+e.g. Google bots execute JS with a timeout.
+
+Most page content ideally should still be available without JS.
+
+### Users with JS disabled or blocked
+
+TODO
 
 ## How to prevent failure
 
