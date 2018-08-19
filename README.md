@@ -118,8 +118,18 @@ Most page content ideally should still be available without JS.
 
 ### Users with JS disabled or blocked
 
-TODO
+Even real users might block JS for good reasons like ads.
 
-## How to prevent failure
+Blocking is typically based domain or path patterns. Obviously it's best to avoid anything suspicious (e.g. `ads.js`).
 
-TODO
+Also sometimes corporate/ISP proxies might inject or block scripts.
+
+### Network and loading errors
+
+In the age of mobile/wireless web access flaky connections are the norm. Network connection can be slow or interrupted altogether.
+
+Other types of content deal with this better (e.g. half the HTML can be rendered, progressive image loading, etc) but scripts are all or nothing.
+
+CDNs can help reduce latency, limiting the risk of connection interruption a bit more.
+
+Apart from connection interruption the HTTP request for a script might also fail with an error code like 404 or 500. This might be trivial but still common.
