@@ -155,3 +155,29 @@ In ECMAScript, the top-most object is called the global object. In the browser, 
 The global object is a public space shared by browser APIs and all scripts running on a page.
 
 A script overwriting something on the global object can break another. Avoid global names wherever possible.
+
+### Reference errors
+
+A `ReferenceError` is thrown when the program references a name — an identifier in ECMAScript terminology — that cannot be resolved to a value.
+
+The JS engines walks the [scope chain](http://ryanmorr.com/understanding-scope-and-context-in-javascript/) looking for each name used in your program.
+
+ReferenceErrors happen when the code uses an identifier that cannot be found in the current scope and all parent scopes.
+
+Could be a typo. Use a linter.
+
+Another common error is assuming a browser support a specific Web API so that a global identifier will be availabel (e.g. `fetch`) but it isn't (e.g. in an older browser).
+
+Use feature detection. (e.g. most basic: check for the names you want to use):
+
+```js
+if (typeof fetch === 'function') {
+  /* Call fetch() */
+}
+```
+
+But be careful as simply verifying a name is available and has the correct type is not always enough.
+
+    * some browsers might have partial support for an API
+    * security and privacy preferences might limit some APIs
+    * each API could deal with error handling in a different way
