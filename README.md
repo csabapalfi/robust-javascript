@@ -133,3 +133,25 @@ Other types of content deal with this better (e.g. half the HTML can be rendered
 CDNs can help reduce latency, limiting the risk of connection interruption a bit more.
 
 Apart from connection interruption the HTTP request for a script might also fail with an error code like 404 or 500. This might be trivial but still common.
+
+### Parsing errors
+
+A JS parser reads the source code and turns it into abstract syntaxt tree.
+
+If it encounters a character that is not expected in a certain place, it immediately aborts parsing the current script and throws a `SyntaxError`.
+
+Simplest cause: typos, use a linter to catch that.
+
+Another common cause: new JS language features not unterstood by older browsers. (e.g. async-await). Be sure to properly transpile your code for your supported browsers.
+
+### Conflicting scripts
+
+In ECMAScript, the top-most object is called the global object. In the browser, the global object is called `window`.
+
+`window` contains hundreds of built-in properties, the ECMAScript core objects and most browser APIs.
+
+`window` also forms the outermost scope for names defined by scripts.
+
+The global object is a public space shared by browser APIs and all scripts running on a page.
+
+A script overwriting something on the global object can break another. Avoid global names wherever possible.
