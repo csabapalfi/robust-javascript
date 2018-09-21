@@ -191,8 +191,8 @@ or script defining user-defined function was not loaded)
 
 Trying to redefine a const: `TypeError: Assignment to constant variable.`
 
-Trying to add a property to an Object that was `Object.seal`ed.
+Trying to add a property to an Object that was `Object.seal`ed: `TypeError: Cannot add property x, object is not extensible`
 
-Trying overwrite properties on an Object that `Object.freeze`ed.
+Trying overwrite properties on an Object that `Object.freeze`ed: `TypeError: Cannot assign to read only property 'x' of object`
 
 Lint, test, use and editor with static code analysis.
