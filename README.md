@@ -209,3 +209,34 @@ There is no common error type for security errors in ECMAScript. Browser APIs th
 * Calling `navigator.mediaDevices.getUserMedia()` but the user declines reject the promise with `NotAllowedError`
 
 Each browser API requires careful study of their spec and testing across browsers to handle errors properly.
+
+## How to prevent failure
+
+TODO
+
+Failing fast
+Feature detection
+Types of checks
+Conditional statements and truthy values
+Existence checks
+Type checks with typeof
+Type checks with instanceof
+Duck typing
+Value checks
+Handling exceptions with try…catch
+Programmatic exceptions
+Encapsulated code
+The Strict Mode
+Promises
+Abstraction libraries
+Polyfills
+Linters
+The Babel compiler
+Languages that compile to JavaScript
+Error logging
+Manual testing
+Automated testing
+Unit tests
+Integration tests
+Acceptance tests
+Writing less JavaScript
