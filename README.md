@@ -176,8 +176,23 @@ if (typeof fetch === 'function') {
 }
 ```
 
-But be careful as simply verifying a name is available and has the correct type is not always enough.
+But be careful as simply verifying a name is available and has the correct type is not always enough:
 
     * some browsers might have partial support for an API
     * security and privacy preferences might limit some APIs
     * each API could deal with error handling in a different way
+
+### Type errors
+
+TypeError is thrown when you try to do something with a value that its type doesn't support.
+
+Trying to use the call operator `()` on something that's not a function (e.g. `undefined` or anything else): `TypeError: x is not a function` ( e.g. browser doesn't support API we're trying to call as a function
+or script defining user-defined function was not loaded)
+
+Trying to redefine a const: `TypeError: Assignment to constant variable.`
+
+Trying to add a property to an Object that was `Object.seal`ed.
+
+Trying overwrite properties on an Object that `Object.freeze`ed.
+
+Lint, test, use and editor with static code analysis.
