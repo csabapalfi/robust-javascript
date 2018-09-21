@@ -199,7 +199,7 @@ Trying overwrite properties on an Object that `Object.freeze`ed: `TypeError: Can
 
 Lint, test, use and editor with static code analysis.
 
-## Security errors
+### Security errors
 
 There is no common error type for security errors in ECMAScript. Browser APIs throw several types of errors when API access is disallowed.
 
@@ -214,29 +214,29 @@ Each browser API requires careful study of their spec and testing across browser
 
 TODO
 
-Failing fast
-Feature detection
-Types of checks
-Conditional statements and truthy values
-Existence checks
-Type checks with typeof
-Type checks with instanceof
-Duck typing
-Value checks
-Handling exceptions with try…catch
-Programmatic exceptions
-Encapsulated code
-The Strict Mode
-Promises
-Abstraction libraries
-Polyfills
-Linters
-The Babel compiler
-Languages that compile to JavaScript
-Error logging
-Manual testing
-Automated testing
-Unit tests
-Integration tests
-Acceptance tests
-Writing less JavaScript
+* Failing fast
+* Feature detection
+* Types of checks
+* Conditional statements and truthy values
+* Existence checks
+* Type checks with typeof
+* Type checks with instanceof
+* Duck typing
+* Value checks
+* Handling exceptions with try…catch
+* Programmatic exceptions
+* Encapsulated code
+* The Strict Mode
+* Promises
+* Abstraction libraries
+* Polyfills
+* Linters
+* The Babel compiler
+* Languages that compile to JavaScript
+* Error logging
+* Manual testing
+* Automated testing
+* Unit tests
+* Integration tests
+* Acceptance tests
+* Writing less JavaScript
