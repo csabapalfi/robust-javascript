@@ -198,3 +198,14 @@ Trying to add a property to an Object that was `Object.seal`ed: `TypeError: Cann
 Trying overwrite properties on an Object that `Object.freeze`ed: `TypeError: Cannot assign to read only property 'x' of object`
 
 Lint, test, use and editor with static code analysis.
+
+## Security errors
+
+There is no common error type for security errors in ECMAScript. Browser APIs throw several types of errors when API access is disallowed.
+
+* Accessing `window.localStorage` throws a `SecurityError` if user has disabled saving data for a site.
+* Calling `navigator.geolocation.getLocation()` called back with `PositionError` if the user declines.
+* Calling `fetch()` but the remote server doesn't allow your origin via CORS rejects the promise with `TypeError`
+* Calling `navigator.mediaDevices.getUserMedia()` but the user declines reject the promise with `NotAllowedError`
+
+Each browser API requires careful study of their spec and testing across browsers to handle errors properly.
