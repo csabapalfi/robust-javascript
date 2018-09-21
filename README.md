@@ -178,9 +178,9 @@ if (typeof fetch === 'function') {
 
 But be careful as simply verifying a name is available and has the correct type is not always enough:
 
-    * some browsers might have partial support for an API
-    * security and privacy preferences might limit some APIs
-    * each API could deal with error handling in a different way
+* some browsers might have partial support for an API
+* security and privacy preferences might limit some APIs
+* each API could deal with error handling in a different way
 
 ### Type errors
 
