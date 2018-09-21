@@ -162,11 +162,11 @@ A `ReferenceError` is thrown when the program references a name — an ident
 
 The JS engines walks the [scope chain](http://ryanmorr.com/understanding-scope-and-context-in-javascript/) looking for each name used in your program.
 
-ReferenceErrors happen when the code uses an identifier that cannot be found in the current scope and all parent scopes.
+ReferenceErrors happen when the code uses an identifier that cannot be found in the current scope and all parent scopes: `ReferenceError: x is not defined`
 
 Could be a typo. Use a linter.
 
-Another common error is assuming a browser support a specific Web API so that a global identifier will be availabel (e.g. `fetch`) but it isn't (e.g. in an older browser).
+Another common error is assuming a browser support a specific Web API so that a global identifier will be availabel (e.g. `fetch`) but it isn't (e.g. in an older browser): `ReferenceError: fetch is not defined`
 
 Use feature detection. (e.g. most basic: check for the names you want to use):
 
@@ -185,6 +185,8 @@ But be careful as simply verifying a name is available and has the correct type 
 ### Type errors
 
 TypeError is thrown when you try to do something with a value that its type doesn't support.
+
+Trying to read a property of undefined: `TypeError: Cannot read property 'x' of undefined`. (e.g. nested property lookup where an intermediate value is undefined).
 
 Trying to use the call operator `()` on something that's not a function (e.g. `undefined` or anything else): `TypeError: x is not a function` ( e.g. browser doesn't support API we're trying to call as a function
 or script defining user-defined function was not loaded)
