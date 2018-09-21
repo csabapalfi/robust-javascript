@@ -2,6 +2,54 @@
 
 Notes for [https://molily.de/robust-javascript](https://molily.de/robust-javascript).
 
+- [Robust client-side JavaScript](#robust-client-side-javascript)
+  * [Introduction](#introduction)
+    + [Characteristics of JS](#characteristics-of-js)
+    + [The browser as runtime](#the-browser-as-runtime)
+    + [JS standards](#js-standards)
+  * [Achieving Robustness](#achieving-robustness)
+    + [Graceful degradation](#graceful-degradation)
+    + [Progressive enhancement](#progressive-enhancement)
+    + [Graceful degradation vs progressive enhancement](#graceful-degradation-vs-progressive-enhancement)
+    + [Fault tolerance](#fault-tolerance)
+    + [Postel's law](#postels-law)
+  * [How JS might fail](#how-js-might-fail)
+    + [Bots without or limited JS support](#bots-without-or-limited-js-support)
+    + [Users with JS disabled or blocked](#users-with-js-disabled-or-blocked)
+    + [Network and loading errors](#network-and-loading-errors)
+    + [Parsing errors](#parsing-errors)
+    + [Conflicting scripts](#conflicting-scripts)
+    + [Reference errors](#reference-errors)
+    + [Type errors](#type-errors)
+    + [Security errors](#security-errors)
+  * [How to prevent failure (WIP)](#how-to-prevent-failure-wip)
+    + [Failing fast](#failing-fast)
+    + [Feature detection](#feature-detection)
+    + [Types of checks](#types-of-checks)
+    + [Conditional statements and truthy values](#conditional-statements-and-truthy-values)
+    + [Existence checks](#existence-checks)
+    + [Type checks with typeof](#type-checks-with-typeof)
+    + [Type checks with instanceof](#type-checks-with-instanceof)
+    + [Duck typing](#duck-typing)
+    + [Value checks](#value-checks)
+    + [Handling exceptions with try…catch](#handling-exceptions-with-trycatch)
+    + [Programmatic exceptions](#programmatic-exceptions)
+    + [Encapsulated code](#encapsulated-code)
+    + [The Strict Mode](#the-strict-mode)
+    + [Promises](#promises)
+    + [Abstraction libraries](#abstraction-libraries)
+    + [Polyfills](#polyfills)
+    + [Linters](#linters)
+    + [The Babel compiler](#the-babel-compiler)
+    + [Languages that compile to JavaScript](#languages-that-compile-to-javascript)
+    + [Error logging](#error-logging)
+    + [Manual testing](#manual-testing)
+    + [Automated testing](#automated-testing)
+    + [Unit tests](#unit-tests)
+    + [Integration tests](#integration-tests)
+    + [Acceptance tests](#acceptance-tests)
+    + [Writing less JavaScript](#writing-less-javascript)
+
 ## Introduction
 
 ### Characteristics of JS
@@ -210,33 +258,56 @@ There is no common error type for security errors in ECMAScript. Browser APIs th
 
 Each browser API requires careful study of their spec and testing across browsers to handle errors properly.
 
-## How to prevent failure
+## How to prevent failure (WIP)
 
-TODO
+### Failing fast
 
-* Failing fast
-* Feature detection
-* Types of checks
-* Conditional statements and truthy values
-* Existence checks
-* Type checks with typeof
-* Type checks with instanceof
-* Duck typing
-* Value checks
-* Handling exceptions with try…catch
-* Programmatic exceptions
-* Encapsulated code
-* The Strict Mode
-* Promises
-* Abstraction libraries
-* Polyfills
-* Linters
-* The Babel compiler
-* Languages that compile to JavaScript
-* Error logging
-* Manual testing
-* Automated testing
-* Unit tests
-* Integration tests
-* Acceptance tests
-* Writing less JavaScript
+### Feature detection
+
+### Types of checks
+
+### Conditional statements and truthy values
+
+### Existence checks
+
+### Type checks with typeof
+
+### Type checks with instanceof
+
+### Duck typing
+
+### Value checks
+
+### Handling exceptions with try…catch
+
+### Programmatic exceptions
+
+### Encapsulated code
+
+### The Strict Mode
+
+### Promises
+
+### Abstraction libraries
+
+### Polyfills
+
+### Linters
+
+### The Babel compiler
+
+### Languages that compile to JavaScript
+
+### Error logging
+
+### Manual testing
+
+### Automated testing
+
+### Unit tests
+
+### Integration tests
+
+### Acceptance tests
+
+### Writing less JavaScript
