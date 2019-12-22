@@ -311,4 +311,5 @@ Each browser API requires careful study of their spec and testing across browser
 
 ### Writing less JavaScript
 
-* know when NOT to solve a problem with JS (when HTML or CSS or maybe even server-side logic would do) as JS is most brittle
+* know when NOT to solve a problem with JS 
+* e.g. when HTML or CSS or maybe even server-side logic would do
